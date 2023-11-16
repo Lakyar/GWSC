@@ -1,0 +1,3466 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background-repeat: no-repeat;
+}
+marquee{
+  color: #70DCA9;
+  background-color: #161616;
+  font-family: 'Exo 2 ', sans-serif;
+  position: absolute;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+  background: linear-gradient(45deg, #caaf86bb, #b2cf99c0, #caaf86, #b2d098);    background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+}
+.bodyBg{
+  background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.8)), url(images/bgRepeat2.jfif);
+  background-repeat: repeat;
+  background-size: contain;
+
+}
+p{
+  font-size: 18px;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #ffffff;
+  text-shadow:   0px 0px 1px #000000;
+}
+h1,h2,h3,h4,h5,h6{
+  color: #ffffff;
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  text-shadow:   0px 0px 10px #000000, 0px 0px 11px #000000, 0px 0px 12px #000000;
+}
+iframe{
+  width: 80%;
+  margin: 20px 10%;
+  box-shadow: 0 0 10px black;
+}
+b{
+  color: rgb(235, 255, 88);
+  padding: 5px 0;
+}
+.bx-vertical-top{
+  padding: 10px;
+  border-radius: 30%;
+  background-color: hsla(64, 100%, 75%, 0.5);
+  color: rgba(0, 0, 0, 0.683);
+  font-size: 28px;
+  margin-left: 95%;
+  font-weight: bold;
+  z-index: -1;
+}
+.bx-vertical-top:hover{
+  background-color: #f7ff80;
+  color: #000;
+}
+button:active{
+  color: #00ff80;
+  text-shadow: 0 0 2px #000;
+  background: #000;
+  background-color: #000000;
+}
+::selection {
+  color: #70DCA9;
+  background: rgba(0, 0, 0, 0);
+}
+/* Navbar */
+nav {
+  height: 80px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  z-index: 2;
+}
+.logoDiv {
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+.logoDiv img {
+  width: 60px;
+  height: 60px;
+}
+#check{
+  display: none;
+}
+.icons{
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+.navLinks {
+  display: flex;
+}
+.navLinks a {
+  margin: auto 16px;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
+  text-decoration: none;
+  color: #fff;
+}
+.navLinks a:hover {
+  color: #55D39A;
+  text-shadow: 0 2px 10px #55D39A;
+}
+.navLinks a:active {
+  color: #000000;
+  text-shadow: 0 2px 10px #55D39A;
+}
+.navActive {
+  border-bottom: 1px solid #44ffab;
+  text-shadow: 0 0px 10px #44ffab;
+}
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  margin: auto 16px;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  color: #55D39A;
+}
+.dropdown:hover .dropbtn {
+  color: #55D39A;
+  text-shadow: 0 2px 10px #55D39A;
+  border-bottom: 1px solid #44ffab;
+  text-shadow: 0 0px 10px #44ffab;
+}
+.dropdown:hover .dropdown-content {
+  display: block; 
+}
+.infoSection{
+  padding: 30px;
+}
+.intro{
+  margin: 30px;
+}
+.intro h1{
+  margin-bottom: 20px;
+}
+.intro p{
+  color: #ffffff;
+  font-size: 20px;
+  margin: 40px;
+  text-shadow: 0 1px 2px rgb(0, 0, 0);
+  background-color: #c4ffe050;
+  padding: 6px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 6px;
+}
+/*searchResults***********************************************************************/
+.searchResultSection{
+  padding: 30px 0;
+  background:  linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 1)),url("images/searchResultBg.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: repeat;
+  border-top: 1px dotted #ffffff8f;
+}
+.searchResultSection h1{
+  padding: 20px;
+  font-size: 40px;
+}
+.place{
+  margin-top: 300px;
+  background: linear-gradient(90deg,hsla(145, 100%, 75%, 0.1),hsla(0, 0%, 100%, 0.2),hsla(163, 100%, 96%, 0.3),hsla(165, 100%, 87%, 0.4));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(168, 255, 189, 0.3);
+  margin: 0px 10%;
+  margin-top: 50px;
+  padding: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.place img{
+  width: 400px;
+  height: 250px;
+}
+.place-name {
+  font-size: 1.5em;
+  margin: 0;
+}
+.place-description {
+  color: #ffffff;
+  text-shadow: 0 0 2px#000000;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.place-price {
+  font-weight: bold;
+  color: #0070c0;
+}
+.place form {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #00000000;
+  width: 60%;
+  display: flex;
+  height: 90%;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.place form label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.conditionInput{
+  display: flex;
+  justify-content: space-evenly;
+}
+.conditionInput div{
+  display: flex;
+  flex-direction: column;
+}
+.conditionInput input{
+  width: 180px;
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  background: linear-gradient(0deg,rgb(193, 193, 193), #5aeab59c);
+}
+.conditionInput label{
+  color: white;
+}
+.conditionInputShorter{
+  width: 10%;
+}
+.conditionInputShorter input{
+  width: 100%;
+}
+.buyBtnDiv label{
+  color: #ffffff;
+}
+.buyBtnDiv{
+  width: 14%;
+}
+.buyBtnDiv input{
+  width: 100%;
+  text-align: center;
+}
+
+/*CONDITION CHECK*****************************************************************/
+.chkH1{
+  font-size: 44px;
+  padding: 20px;
+}
+.chkForm{
+  background: linear-gradient(0deg,hwb(143 18% 32% / 0.2),hsla(153, 10%, 35%, 0.3), hwb(143 18% 32% / 0.2));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  padding: 80px;
+  align-items: end;
+  margin: 10%;
+  border-radius: 10px;
+  box-shadow:0 0 1000px rgb(0, 20, 15);
+}
+.chkForm div{
+  display: flex;
+  flex-direction: column;
+}
+.chkForm label{
+  font-size: 20px;
+}
+.chkForm input{
+  width: 200px;
+  height: 50px;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 6px;
+  background: linear-gradient(0deg,rgb(255, 255, 255), hsla(153, 59%, 59%, 0.5));
+}
+.camping-site, .swimming-site{
+  display: flex;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background:linear-gradient(90deg,hsla(0, 0%, 0%, 0.1),hsla(0, 0%, 0%, 7));
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+.camping-site p, .swimming-site p{
+  font-weight: 700;
+}
+.camping-site-R, .swimming-site-R{
+  width: 50%;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  box-shadow: 0 0 10px rgb(0, 88, 59);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.site-detail-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.dollarSign{
+  color: #00d273;
+  text-shadow: -2px 2px 1px #000, 0 0 1px white ;
+}
+.purchase{
+  width: 85%;
+  margin: 200px auto;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(180deg,hsla(0, 0%, 0%, 0),hsla(0, 0%, 0%, 0),hsla(0, 0%, 0%, 0.6));
+  box-shadow: 0 0 100px black;
+  padding: 50px 30px;
+}
+.purchase img, .swimming-site img, .camping-site img{
+  height: 300px;
+  width: 400px;
+}
+.purchase-details{
+  display: flex;
+}
+.purchase-details p{
+  font-weight: bold;
+  color: black;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0);
+}
+.purchaseDetailsHeader{
+  background:linear-gradient(225deg,hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.6));
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-width: 15%;
+  height: 300px;
+}
+.purchase form{
+  width: 35%;
+  height: 300px;
+  background:linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.6));
+}
+.purchase form input, .purchase form textarea{
+  width: 100%;
+  background-color: #d9d9d9;
+  border-radius: 4px;
+  font-family: serif;
+  color: #000;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+}
+.purchase form textarea::placeholder {
+  color: #000000; 
+}
+.paymentMethod{
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+}
+.paymentMethod input{
+  margin-right: 8px;
+}
+
+.paymentMethod p, .paymentMethod div label{
+  font-weight: normal;
+}
+/*HOME***********************************************************************/
+
+.homeSection{
+  background-image: url("images/bg.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 0.5s ease;
+}
+.homeSection nav{
+  background: linear-gradient(90deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), #00000092);
+  transition: background-color 0.5s ease;
+}
+.homeSection nav.scrolled {
+  background-color: hsla(0, 0%, 0%, 0.95); 
+  transition: background-color 1.5s ease; 
+}
+.homeSection h1{
+  margin: 20px auto;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+.CtoAContainer{
+  margin: auto 0;
+  background: linear-gradient(135deg,hsla(151, 49%, 50%, 0.5),hsla(0, 0%, 100%, 0),hsla(0, 0%, 100%, 0),hsla(0, 0%, 100%, 0),hsla(0, 0%, 100%, 0),hsla(228, 100%, 71%, 0),hsla(151, 49%, 50%, 0.5));
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  justify-content: center;
+  padding: 30px ;
+  align-items: center;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px); 
+  box-shadow: 0 0 50px #000000;
+  border-radius: 10px;
+  margin-top: 250px;
+}
+.CtoAContainer button,.confirmBtn,.buyBtn, .chkAvailablityBtn{
+  background: linear-gradient(180deg,rgb(211, 211, 211), #84dfb4);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  padding: 15px 50px;
+  margin: 0 2px ;
+  transition: 0.5s all ease;
+  border-radius: 1px;
+  cursor: pointer;
+} 
+.buyBtn{
+  padding: 10px 30px;
+}
+.CtoAContainer button:hover,.confirmBtn:hover,.buyBtn:hover, .chkAvailablityBtn:hover{
+  background: #6AD9A5;
+  box-shadow: 0 0 50px #000000,0 0 50px #000000;
+  transform: scale(1.05);
+}
+.searchInput{
+  background: linear-gradient(0deg,rgb(255, 255, 255), #afffda);
+  width: 60%;
+  padding: 12px 20px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid #000;
+}
+.searchInput:active{
+  background: #ffffff;
+}
+.searchForm{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.searchBtn{
+  border: 2px solid #000;
+  border-radius: 0 10px 10px 0;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: linear-gradient(0deg,rgb(255, 255, 255), #afffda);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.searchBtn:hover{
+  background: linear-gradient(0deg,rgb(231, 231, 231), #90d2b3);
+  transform: scale(1.05);
+}
+.homeSection p{
+  text-align: center;
+}
+.homeCard{
+  background: linear-gradient(rgba(214, 217, 159, 0.95),rgba(165, 201, 174, 0.95)),url(images/bgRepeat2.jfif);
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.homeCard p{
+  color: #032116;
+}
+
+.homeCard .mySlides {
+  display: none;
+}
+.mySlides img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 10px;
+  box-shadow: -3px 3px 10px black;
+}
+.slideshow-container {
+  max-width: 100%;
+  max-height: 500px;
+  position: relative;
+}
+.dot {
+  height: 4px;
+  width: 24px;
+  margin: 0 2px;
+  background-color: #000000;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #ffffff;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+#weatherContainer {
+  background-color: rgba(219, 0, 0, 0.25);
+  box-shadow: 1px 1px 5px rgb(44, 44, 44);
+  padding: 35px;
+  border-radius: 10px;
+  position: absolute;
+  visibility: hidden;
+  border: 1px solid black;
+}
+#weatherContainer h1 {
+  margin: 5px;
+  font-size: 42px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#searchContainer {
+  width: 35%;
+  padding: 20px;
+  margin: 30px auto;
+  background: #3d3d3d7a;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  align-items: center;
+}
+#searchContainer input,#searchContainer button {
+  margin: 10px 10%;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  padding: 6px;
+  border-radius: 6px;
+}
+.searchControl {
+  background-color: rgb(238, 238, 238);
+  color: #000000;
+  width: 100%;
+}
+#weatherMain {
+  display: block;
+  margin-bottom: 20px;
+}
+#weatherMain div {
+  display: inline-block;
+}
+#weatherDescriptionHeader {
+  font-size: 18px;
+}
+#temperature {
+  font-size: 28px;
+}
+.bottom-details {
+  font-size: 16px;
+}
+/*INFO***********************************************************************/
+
+.infoCard{
+  overflow: hidden;
+  display: flex;
+  height: 250px;
+  margin: 30px;
+  justify-content: space-between;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: -10px 10px 20px black;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.infoCard1{
+  background-color: hwb(35 39% 35% / 0.8);
+}
+.infoCard2{
+  background-color: hsla(46, 21%, 64%, 0.8);
+}
+.infoCard3{
+  background-color: hsla(67, 19%, 72%, 0.8);
+}
+.infoCard4{
+  background-color: hsla(73, 19%, 60%, 0.8);
+}
+.infoCard img{
+  width: 20%;
+  border-radius: 20px 0 0 20px;
+  transition: 0.5s;
+}
+.infoCard img:hover{
+  transform: scale(1.2) translate(20px,-10px);
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: 0 0 10px black;
+}
+.infoCardContent{
+  width: 70%;
+  padding: 20px;
+  background-color: #e3932b00;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+.infoCardContent h2{
+  margin-bottom: 10px;
+}
+.infoCardContent p{
+  color: #0a1400;
+  text-shadow: 0 1px 1px #000000;
+}
+.btn-info{
+  background: linear-gradient(0deg, rgba(228, 255, 197, 0.9), rgba(253, 215, 91, 0.9));
+  padding: 10px 100px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.btn-info:hover{
+  background: linear-gradient(0deg, #c8e3a9, #fbd149);
+  box-shadow: 2px 2px 10px #000000;
+}
+.btn-wishList{
+  padding: 10px 20px;
+}
+/*REVIEW*********************************************************************/
+
+.reviewSection{
+  padding: 30px;
+}
+.reviewCardContainer{
+  display: flex;
+  width: 80%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  background-color: hsla(0, 0%, 100%, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  margin: 30px auto;
+  justify-content: space-around;
+  padding: 30px;
+  flex-wrap: wrap;
+  row-gap: 50px;
+}
+.reviewCard{
+  display: flex;
+  background: linear-gradient(225deg, #dfe9a5ce, #6dc2a8c5);
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: -10px 10px 20px hsla(0, 0%, 0%, 0.3);
+  transition: 0.3s;
+}
+.reviewCard:hover{
+  background: linear-gradient(295deg, #dfe9a5ce, #6dc2a8c5);
+  box-shadow: -10px 10px 10px #00000080;
+}
+.reviewCard p{
+  font-size: 20px;
+  color: black;
+  margin: 10px 0;
+  margin: 10px 0;
+  text-shadow: -100px 30px 10px hsla(0, 0%, 0%, 0.5), 0 0 1px black;
+}
+.reviewCard img {
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px 0 30px 0;
+  margin-bottom: 30px;
+  box-shadow: 6px 20px 20px rgba(0, 0, 0, 0.5);
+}
+.reviewCardContent{
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  justify-content: space-between;
+}
+.reviewForm{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.reviewForm textarea{
+  color: white;
+  width: 40%;
+  font-size: 20px;
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 10px;
+  background: linear-gradient(45deg,#030312, #032116);
+  box-shadow: -10px 10px 20px #030312, 10px -10px 20px #032116;
+}
+textarea::placeholder{
+  color: #ffffff;
+}
+.reviewForm button{
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg,rgb(3, 3, 18), rgb(3, 33, 22));
+  padding: 16px 20px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: -5px 5px 20px #54549b, 5px -5px 20px #408b71;
+  transition: 0.3s;
+}
+.reviewForm button:hover{
+  background: linear-gradient(45deg,#0a0a3a, #053e2a);
+  transform: scale(1.1);
+  box-shadow: -5px 5px 20px #0a0a3a, 5px -5px 20px #053e2a;
+}
+.revLogin{
+  background-color: rgba(0, 255, 106, 0.3);
+  padding: 1px auto;
+  text-align: center;
+  text-shadow: 0 1px 1px #000;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}bd268
+/*PITCH TYPES********************************************************************/
+.selectSiteContainer{
+  background-color: hsla(149, 100%, 85%, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width: 30%;
+  display: flex;
+  margin: 30px auto;
+  justify-content: center;
+  padding: 20px ;
+  align-items: center;
+  border: 3px solid #000;
+}
+.selectSiteContainer h3{
+  margin:auto;
+  font-size: 26px;
+}
+.selectSiteContainer button{
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0px;
+  transition: 0.3s all ease;
+  border-radius: 4px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.selectSiteContainer button:hover{
+  background-color: #6AD9A5;
+}
+.pitchTypeSection{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.introSC{
+  margin-top: 60px;
+}
+.pitchTypeCard{
+  border-radius: 10px;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  background-color: hsla(149, 100%, 85%, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px white;
+  overflow: hidden;
+}
+.pitchTypeContent{
+  padding: 30px;
+  width: 70%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pitchTypeContent p{
+  color: black;
+}
+.pitchTypeCard button:hover{
+  border-radius: 0px;
+  transform: scale(1.01);
+  background: linear-gradient(45deg, #e1c251, #dfcc51);
+  box-shadow: 0 0 10px #000000;
+}
+.pitchTypeCard img{
+  border-radius: 0 10px 10px 0;
+  height: 300px;
+  width: 300px;
+  transition: 0.3s;
+}
+.pitchTypeCard img:hover{
+  transform: scale(1.5) translateY(-30px);
+}
+
+/*FEATURE********************************************************************/
+
+.featureSection{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.featureCardContainer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: space-around;
+}
+.featureCard{
+  background: linear-gradient(175deg, hsla(0, 0%, 0%, 0),hsla(147, 100%, 91%, 0.5));
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px); 
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+  margin-bottom: 50px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.featureCard:hover{
+  box-shadow: -10px 10px 20px;
+  background-color: hsla(143, 44%, 36%, 0.4);
+}
+.featureCard img{
+  width: 250px;
+  height: 250px;
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.featureCardContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  padding: 20px;
+  z-index: 1;
+}
+.featureCardContent p{
+  color: #000000;
+  text-shadow: 0 0 1px rgb(0, 0, 0);
+}
+.featureText p{
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.wearableDevicesCard img{
+  border-radius: 0 0 0 0;
+  width: 30%;
+  transition: 0.3s;
+}
+.wearableDevicesCard img:hover, .featureCard img:hover{
+  transform: scale(1.3);
+}
+.wearableDevicesCard{
+  padding: 10px;
+  background-color: hsla(143, 44%, 36%, 0.4);
+  border-radius: 0 0 0 0;
+}
+/*LOCAL ATTRACTIONS********************************************************************/
+
+
+.localAttractionSection{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.localAttractionCard{
+  width: 80%;
+  background-color: hsla(145, 40%, 45%, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  box-shadow: -10px 10px 20px;
+  overflow: hidden;
+}
+.localAttractionCard img{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px 0 0 10px;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  object-fit: cover;
+}
+.localAttractionCard img:hover{
+  transform: scale(1.3) translateX(20px) translateY(-20px);
+  border-radius: 0;
+  box-shadow: -20px 20px 30px;
+}
+.localAttractionContent{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  z-index: 1;
+}
+.localAttractionCard a{
+  font-size: 20px;
+  color: rgb(143, 169, 255);
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.localAttractionCard a:hover{
+  font-size: 20px;
+  color: rgb(255, 244, 84);
+}
+/*SAFETY********************************************************************/
+.safetySection{
+  min-height: 100vh;
+  padding: 30px;
+}
+.safetySection p{
+  font-size: 20px;
+}
+/*ACCOUNT********************************************************************/
+.accountSection{
+  min-height: 100vh;
+  background: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+.card{
+  margin: auto;
+  padding: 30px;
+  margin-top: 100px;
+  width: 1000px;
+  height: auto;
+  border-radius: 44px;
+  background: lightgrey;
+  background: linear-gradient(0deg, hsla(0, 0%, 46%, 0.7),hsla(0, 0%, 18%, 0.6), hsla(0, 0%, 8%, 0.8));
+  box-shadow: -10px 10px 50px #000000;
+}
+.cardTop{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  align-items: center;
+}
+.cardTop img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.bxs-edit:hover, .bx-heart:hover{
+  color: rgb(245, 255, 106);
+}
+.bxs-edit:active, .bxs-trash:active, .bx-heart:active{
+  color: rgb(0, 0, 0);
+}
+.bx-search:active{
+  color: rgb(255, 255, 255);
+  background: #000000;
+  box-shadow: 0 0 5px hsla(0, 0%, 100%, 0.7);
+}
+.bx-heart{
+  margin: 0 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.cardBot{
+  padding: 10px 0;
+  background-color: #ffffff00;
+}
+.cardBot button{
+  height: 50px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg,#651a34, #5c1320);
+  padding: 16px 20px;
+  border-radius: 20px;
+  margin: 16px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cardBot button:hover{
+  background: linear-gradient(45deg,#3a0a1b, #5c0537);
+  transform: scale(1.1);
+  box-shadow: -5px 5px 20px #651a34, 5px -5px 20px #5c1320;
+}
+.cardBot button:active{
+  background: linear-gradient(45deg,#310000, #190000);
+}
+.wishListContainer{
+  background-color: hsla(0, 0%, 0%, 0.1);
+  padding: 0px;
+}
+.wishList{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wishList button{
+  background: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.wishList button:hover{
+  background: linear-gradient(45deg,#af650a, #1a421d);
+  transform: scale(1.05);
+  box-shadow: -5px 5px 20px #F69010, 5px -5px 20px #306F34;
+}
+.bxs-trash{
+  color: rgb(255, 113, 113);
+  font-size: 24px;
+  cursor: pointer;
+}
+/*SIGNUP********************************************************************/
+.signUpSection{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+.signUpSection nav, .contactSection nav{
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); 
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.signUpForm, .loginForm{
+  background-color: rgba(167, 255, 154, 0.1);
+  width: 40%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); 
+  border-radius: 10px;
+  padding: 30px;
+  margin: 100px auto;
+}
+.signUpForm input, .loginForm input, .contactForm input, .signUpBtn{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 16px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 4px;
+  background:linear-gradient(90deg,rgb(204, 204, 204),rgb(245, 222, 178));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+}
+.signUpForm button, .loginForm button, .contactForm button{
+  padding: 10px;
+  border-radius: 4px;
+  background:linear-gradient(90deg,rgb(204, 204, 204),rgb(245, 222, 178));
+  cursor: pointer;
+  width: 20%;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.signUpForm button:hover, .loginForm button:hover{
+  background:linear-gradient(90deg,rgb(247, 247, 247),rgb(230, 189, 111));
+  width: 20%;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+.loginForm{
+  height: 500px;
+}
+.errMsg{
+  color: red;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 10%;
+  background-color: rgba(245, 179, 179, 0.4);
+}
+/*CONTACT********************************************************************/
+.contactSection{
+  /* background: url(images/bgRepeat2.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  min-height: 100vh;
+}
+.contactForm{
+  background-color: rgba(167, 255, 154, 0.1);
+  width: 50%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 20px;
+  background: hsla(0, 0%, 100%, 0.1);
+  z-index: 0;
+}
+.contactForm button{
+  padding: 14px;
+  transition: 0.3;
+  background:linear-gradient(45deg,#b8ffde, #ffffff);
+}
+.contactForm button:hover{
+  transform: scale(1.1);
+  border-radius: 5px;
+  background:linear-gradient(45deg,#b8ffde, #ffb4b4);
+}
+.contactForm input, .contactForm textarea{
+  background: linear-gradient(45deg,#b8ffde, #ffffff);
+  font-size: 16px; 
+  color: #000;
+  width: 60%;
+} 
+.contactForm textarea{
+  padding: 20px;
+  border-radius: 10px;
+}
+.contactForm textarea::placeholder{ 
+  color: #000;
+}
+input:active, button:active, textarea:active{
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.contactForm button{
+  color:#000;
+}
+.contactForm h1{
+  color: #00a149;
+  text-shadow: 0 0 3px #ffffff,0 0 10px #ffffff,0 0 20px #ffffff,0 0 30px #ffffff,0 0 40px #ffffff,0 0 50px #ffffff;
+}
+.aboutText{
+  padding-top: 20px;
+}
+.aboutText p{
+  color:white;
+  text-shadow: 0 0 1px #000,0 0 2px #000, 0 0 3px #000,0 0 4px #000,0 0 5px #000;
+  background-color: hsla(0, 0%, 0%, 0.4);
+  padding: 6px;
+}
+/*SWIM_SECTION********************************************************************/
+.swimSection{
+  display: flex;
+  min-height: 100vh;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(images/swim3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.campSection{
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(images/safari\ tent.jpg);
+}
+.resvForm{
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  box-shadow: 0 0 30px black, 0 0 100px black;
+  margin: auto;
+  width: 80%;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around; 
+  border-radius: 10px;
+  transition: 0.5s ease all;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); 
+}
+.resvDate{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background: linear-gradient(45deg, #e4e4e4, #3e3e3e);
+}
+.resvDate label{
+  font-size: 18px;
+  color: white;
+  text-shadow:  0 0 3px rgb(0, 0, 0);
+}
+.resvForm input{
+  width: 100%;
+  background: linear-gradient(45deg, #e4e4e4, #3e3e3e);
+  padding: 15px;
+  font-size: 24px;
+  font-family: 'Alegreya Sans', sans-serif;
+  border-radius: 0px;
+  transition: 0.3s;
+}
+.resvForm input.resvQty:nth-child(3),
+.resvForm input.resvQty:nth-child(4) {
+  width: 13%;
+}
+.resvForm input:hover{
+  border-radius: 5px;
+  background: linear-gradient(45deg, #ffffff, #ffffff);
+  box-shadow: 0 0 10px black, 0 5px 10px black;
+}
+::placeholder{
+  color: #000;
+}
+.resvForm button{
+  width: 8%;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #e4e4e4, #3e3e3e);
+  transition: 0.3s;
+}
+.resvForm button:hover{
+  border-radius: 0;
+  transform: scale(1.05);
+  background: linear-gradient(45deg, rgb(249, 249, 249), #d0d0d0);
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+/*FOOTER********************************************************************/
+
+footer{
+  background-color: #353535;  
+  padding: 20px;
+}
+footer .footerH{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.footerH div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footerP{
+  width: 60%;
+}
+.footerB{
+  padding: 20px;
+  border-top: 2px dashed #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+}
+footer a{
+  text-decoration: none;
+  color: #fff;
+}
+.footerB div a{
+  font-size: 20px;
+  margin: 10px;
+}
+/*RESPONSIVE*********************************************
+**********************************************************/
+/* Large Devices (<= 1440px) */
+@media (max-width: 1440px) {
+  
+  .intro{
+    margin: 16px;
+    margin-top: 0px;
+  }  
+  .intro p{
+    margin: 20px;
+    font-size: 18px;
+  }  
+  /*HOME***********************************************************************/
+  .navLinks a {
+    margin: auto 12px;
+  }
+  .homeSection h1{
+    margin-top: 30px;
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  .CtoAContainer{
+    width: 70%;
+    padding: 30px ;
+    margin-top: 150px;
+  }
+  .CtoAContainer button,.confirmBtn,.buyBtn{
+    font-size: 18px;
+    padding: 12px 32px;
+    margin: 1px;
+  }
+  .CtoAContainer button:hover,.confirmBtn:hover,.buyBtn:hover{
+    background: #6AD9A5;
+    box-shadow: 0 0 40px #000000,0 0 40px #000000;
+    transform: scale(1.05);
+  }  
+  .searchInput{
+    background: linear-gradient(0deg,rgb(255, 255, 255), #afffda);
+    width: 60%;
+    padding: 12px 20px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #000;  
+  }
+  .searchInput:active{
+    background: #ffffff;
+  }
+  .searchForm{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }  
+  .searchBtn{
+    border: 2px solid #000;
+    border-radius: 0 10px 10px 0;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: linear-gradient(0deg,rgb(255, 255, 255), #afffda);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }  
+  #searchContainer {
+    width: 50%;
+  }
+  /*searchResults***********************************************************************/
+  .searchResultSection{
+    padding: 20px 0;
+  }
+  .searchResultSection h1{
+    font-size: 30px;
+  }
+  .place{
+    margin: 0px 6%;
+    margin-top: 30px;
+    padding: 16px;
+    width: 88%;
+    justify-content: space-between;
+  }
+  .place img{
+    width: 320px;
+    height: 200px;
+  }
+  .place-name {
+    font-size: 18px;
+  }
+  .place-description {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  .place-price {
+    font-size: 17px;
+  }
+  .place form {
+    padding: 12px;
+    width: 66%;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .place form label {
+    margin-bottom: 8px;
+  }
+  .conditionInput{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .conditionInput input{
+    margin: 0 6px;
+    height: 40px;
+    width: 160px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+  .conditionInputShorter input{
+    width: 100%;
+  }
+  .buyBtnDiv input{
+    width: 100%;
+  }
+  .camping-site, .swimming-site{
+    display: flex;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background:linear-gradient(90deg,hsla(0, 0%, 0%, 0.1),hsla(0, 0%, 0%, 7));
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    justify-content: space-between;
+  }
+  .camping-site img, .swimming-site img{
+    width: 400px;
+  }
+  .camping-site p, .swimming-site p{
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .camping-site-R, .swimming-site-R{
+    margin: 0 14px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .buyBtn{
+    padding: 8px 30px;
+    border-radius: 4px;
+  }
+  /*PURCHASE***********************************************************************/
+  .purchase{
+    width: 98%;
+    margin: 100px auto;
+    padding: 40px 20px;
+    justify-content: flex-start;
+  }
+  .purchase img{
+    height: 100%;
+    width: 300px;
+    margin-right: 20px;
+  }
+  .purchase-details p{
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0);
+    padding: 10px;
+  }
+  .purchaseDetailsHeader{
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 17%;
+    height: 300px;
+    margin-right: 20px;
+  }
+  .purchaseDetailsHeader p{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+  }
+  .purchase form{
+    min-width: 35%;
+    height: 300px;
+  }
+  .purchase form input, .purchase form textarea{
+    font-size: 16px;
+    padding: 10px;
+  }
+  .paymentMethod{
+    display: flex;
+  }
+  .homeCard{
+    background-color: #382b1d00;
+    max-width: 80%;
+  }
+  .mySlides img {
+    max-height: 400px;
+  }
+  .slideshow-container {
+    max-height: 400px;
+  }
+  /*CONDITION CHECK*****************************************************************/
+  .chkForm{ 
+    padding: 60px 30px;
+    width: 86%;
+    margin: 10% 7%;
+  }
+
+  .chkForm input{
+    width: 180px;
+    height: 42px;
+    padding: 12px;
+    font-size: 18px;
+  }
+  .chkForm label{
+    font-size: 18px;
+  }
+  /*INFO***********************************************************************/
+  .infoCard{
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: -8px 8px 16px black;
+  }
+  .infoCard img:hover{
+    transform: scale(1.5) translate(30px,-30px);
+  }
+  .infoCardContent{
+    width: 75%;
+    padding: 10px;
+  }
+
+  .btn-info{
+    padding: 8px 50px;
+    font-size: 14px;
+  }
+  /*REVIEW*********************************************************************/
+
+  .reviewCardContainer{
+    width: 96%;
+    box-shadow: 0 0 8px black;
+    margin: 20px auto;
+    padding: 20px;
+    row-gap: 30px;
+  }
+  .reviewCard{
+    width: 46%;
+  }
+  .reviewCard p{
+    font-size: 18px;
+    color: black;
+    margin: 10px 0;
+    text-shadow: -100px 30px 8px hsla(0, 0%, 0%, 0.5),0 0 1px rgb(0, 0, 0);
+  }
+  .reviewCardContent{
+    margin: 20px;
+  }
+  .reviewCard img {
+    width: 90px;
+    height: 90px;
+  }
+  .reviewForm{
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+  }
+  textarea{
+    width: 70%;
+  }
+  .reviewForm button{
+    box-shadow: -5px 5px 30px hsla(240, 71%, 13%, 0.5), 5px -5px 30px hsla(159, 85%, 13%, 0.5);
+  }
+  /*PITCH TYPES********************************************************************/
+  .selectSiteContainer{
+    width: 40%;
+  }
+  .selectSiteContainer h3{
+    margin: auto;
+    font-size: 20px;
+  }
+  .selectSiteContainer button{
+    background-color: rgb(255, 255, 255);
+    font-size: 17px;
+    padding: 10px 16px;
+  }
+  .pitchTypeCard{
+    margin-bottom: 20px;
+    width: 90%;
+  }
+  .pitchTypeContent{
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .pitchTypeCard img{
+    height: 230px;
+    width: 230px;
+  }
+
+  /*FEATURE********************************************************************/
+
+  .featureSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .featureCard{
+    width: 46%;
+    margin-bottom: 30px;
+  }
+  .featureCard img{
+    width: 200px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+  .featureCardContent{
+    padding: 20px;
+  }
+  .featureCardContent p{
+    font-size: 16px;
+  }
+  .wearableDevicesCard img{
+    border-radius: 0 0 0 0;
+    width: 30%;
+  }
+  .wearableDevicesCard{
+    padding: 10px;
+    background-color: hsla(143, 44%, 36%, 0.4);
+    border-radius: 0 0 0 0;
+  }
+  /*LOCAL ATTRACTIONS********************************************************************/
+
+  .localAttractionCard{
+    width: 90%;
+  }
+  .localAttractionCard img{
+    width: 300px;
+    height: 270px;
+  }
+  .localAttractionCard img:hover{
+    transform: scale(1.5) translateX(20px) translateY(-20px);
+  }
+  .safetySection p{
+    font-size: 18px;
+  }
+  /*ACCOUNT********************************************************************/
+  .card {
+    margin-top: 50px;
+    width: 800px;
+  }
+  .cardTop img{
+    height: 150px;
+    width: 150px;
+  }
+  /*SIGNUP********************************************************************/
+  .signUpForm, .loginForm{
+    background-color: rgba(167, 255, 154, 0.1);
+    width: 50%;
+    height: 500px;
+    padding: 20px;
+    margin: 30px auto;
+  }
+    /*CONTACT********************************************************************/
+  .contactForm{
+    width: 70%;
+    height: 350px;
+    padding: 20px;
+  }
+  .contactForm button{
+    padding: 10px;
+  }
+  .contactForm button:hover{
+    transform: scale(1.1);
+    border-radius: 5px;
+  }
+  .contactForm input, .contactForm textarea{
+    width: 70%;
+  } 
+  .contactForm button{
+    color:#000;
+  }
+  .contactForm h1{
+    font-size: 30px;
+    text-shadow: 0 0 3px #ffffff,0 0 10px #ffffff,0 0 20px #ffffff,0 0 30px #ffffff,0 0 40px #ffffff,0 0 50px #ffffff;
+  }
+  .aboutText p{
+    font-size: 16px;
+    color:white;
+    text-shadow: 0 0 1px #000,0 0 2px #000, 0 0 3px #000,0 0 4px #000,0 0 5px #000;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    padding: 6px;
+  }
+}
+
+/* Medium Devices (<= 1024px) */
+  @media (max-width: 1024px) {
+    
+    
+    /* Navbar */
+  nav {
+    height: 70px;
+  }
+  .logoDiv img {
+    width: 50px;
+    height: 50px;
+  }
+  .navLinks a {
+    font-size: 13px;
+    margin: auto 12px;
+  }
+  /*HOME***********************************************************************/
+
+  .homeSection h1{
+    margin-top: 10px;
+    font-size: 28px;
+  }
+  .CtoAContainer{
+    width: 80%;
+    padding: 20px ;
+    margin-top: 150px;
+  }
+  .CtoAContainer button,.confirmBtn,.buyBtn, .chkAvailablityBtn{
+    font-size: 18px;
+    padding: 12px 35px;
+  } 
+  .searchInput{
+    width: 60%;
+    padding: 8px 20px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .searchForm{
+    width: 60%;
+    margin-top: 30px;
+  }
+  .searchBtn{
+    height: 40px;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+  #searchContainer {
+    width: 60%;
+  }
+
+  .homeCard p{
+    font-size: 16px;
+  }
+
+  /*CONDITION CHECK*****************************************************************/
+  .chkH1{
+    font-size: 30px;
+    padding: 20px;
+  }
+  .chkForm{ 
+    padding: 50px 24px;
+    width: 90%;
+    margin: 10% 5%;
+    box-shadow:0 0 400px rgb(0, 20, 15);
+  }
+  .chkForm input{
+    margin: 0 3px;
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .chkForm label{
+    font-size: 16px;
+  }
+  .camping-site, .swimming-site{
+    display: flex;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background:linear-gradient(90deg,hsla(0, 0%, 0%, 0.1),hsla(0, 0%, 0%, 7));
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    justify-content: space-between;
+  }
+  .camping-site h2, .swimming-site h2{
+   font-size: 20px;
+  }
+  .camping-site img, .swimming-site img{
+    height: 200px;
+    max-width: 100%;
+  }
+  .camping-site p, .swimming-site p{
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .camping-site-L, .swimming-site-L{
+    min-width: 35%;
+  }
+  .camping-site-R, .swimming-site-R{
+    margin: 0 14px;
+    min-width: 65%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .buyBtn{
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .purchase{
+    width: 100%;
+    margin: 120px auto;
+    padding: 40px 20px;
+    justify-content: flex-start;
+  }
+  .purH1{
+    font-size: 30px;
+  }
+  .purchase img{
+    height: 100%;
+    width: 260px;
+    margin-right: 20px;
+  }
+  .purchase-details p{
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0);
+    padding: 10px;
+  }
+  .purchaseDetailsHeader{
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 17%;
+    height: 300px;
+    margin-right: 20px;
+  }
+  .purchaseDetailsHeader p{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+  }
+  .purchase form{
+    min-width: 35%;
+    height: 300px;
+  }
+  .purchase form input, .purchase form textarea{
+    font-size: 16px;
+    padding: 10px;
+  }
+  .paymentMethod{
+    display: flex;
+  }
+  .mySlides img {
+    max-height: 320px;
+  }
+  .slideshow-container {
+    max-height: 320px;
+  }
+
+  /*searchResults***********************************************************************/
+  .searchResultSection{
+    padding: 10px 0;
+  }
+  .searchResultSection h1{
+    padding: 12px;
+    font-size: 24px;
+  }
+  .place{
+    margin: 0px 4%;
+    margin-top: 20px;
+    padding: 12px;
+    width: 92%;
+    justify-content: space-between;
+  }
+  .place img{
+    width: 280px;
+    height: 160px;
+  }
+  .place-name {
+    font-size: 16px;
+  }
+  .place-description {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .place-price {
+    font-size: 15px;
+  }
+  .place form {
+    padding: 12px;
+    width: 72%;
+    display: flex;
+  }
+  .place form label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .conditionInput input{
+    margin: 0 6px;
+    height: 32px;
+    width: 120px;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .conditionInputShorter input{
+    width: 100%;
+  }
+  .buyBtnDiv{
+    width: 14%;
+  }
+  .buyBtnDiv input{
+    width: 100%;
+  }
+  /*PURCHASE***********************************************************************/
+  .purchase{
+    width: 98%;
+    margin: 120px auto;
+    padding: 20px 10px;
+  }
+  .purchase img{
+    height: 100%;
+    width: 230px;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  .purchase-details p{
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0);
+    padding: 10px;
+  }
+  .purchaseDetailsHeader{
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 20%;
+    height: 300px;
+    margin-right: 10px;
+  }
+  .purchase form{
+    height: 100%;
+  }
+  .purchase form input, .purchase form textarea{
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /*INFO***********************************************************************/
+  .infoSection, .pitchTypeSection, .featureSection, .localAttractionSection{
+    padding: 10px;
+  }
+  .intro h1 {
+    font-size: 28px;
+  }
+  .infoSection h2, .reviewSection h2, .pitchTypeSection h2, .featureSection h2, .localAttractionSection h2{
+    font-size: 20px;
+  }
+  .infoSection p, .reviewSection p, .pitchTypeSection p, .featureSection p, .localAttractionSection p{
+    font-size: 15px;
+  }
+  .infoCard{
+    height: 170px;
+    margin: 16px;
+    border-radius: 14px;
+    box-shadow: -8px 8px 16px black;
+  }
+  .infoCard img{
+    border-radius: 14px 0 0 14px;
+  }
+  .infoCard img:hover{
+    transform: scale(1.5) translate(20px,-20px);
+  }
+  .infoCardContent{
+    width: 80%;
+    padding: 14px;
+  }
+
+  .btn-info{
+    padding: 4px 30px;
+    font-size: 13px;
+  }
+  /*REVIEW*********************************************************************/
+  .reviewCardContainer{
+    width: 98%;
+    box-shadow: 0 0 8px black;
+    margin: 10px auto;
+    padding: 16px;
+    row-gap: 24px;
+  }
+  .reviewCard{
+    width: 46%;
+  }
+  .reviewCard p{
+    font-size: 14px;
+    color: black;
+    margin: 10px 0;
+    text-shadow: -70px 30px 8px hsla(0, 0%, 0%, 0.4),0 0 1px rgb(0, 0, 0);
+  }
+  .reviewCardContent{
+    margin: 16px;
+  }
+  .reviewCard img {
+    width: 70px;
+    height: 70px;
+  }
+  .reviewForm{
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+  }
+  .reviewForm textarea{
+    font-size: 15px;
+    width: 70%;
+    padding: 6px 10px;
+    box-shadow: -5px 5px 20px hsla(240, 71%, 13%, 0.8), 5px -5px 20px hsla(159, 85%, 13%, 0.8);
+  }
+  .reviewForm button{
+    font-size: 11px;
+    box-shadow: -5px 5px 30px hsla(240, 71%, 13%, 0.5), 5px -5px 30px hsla(159, 85%, 13%, 0.5);
+  }
+  /*PITCH TYPES********************************************************************/
+  .selectSiteContainer{
+    width: 48%;
+    border: 2px solid #303030;
+  }
+  .selectSiteContainer h3{
+    font-size: 17px;
+  }
+  .selectSiteContainer button{
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+  .pitchTypeCard{
+    margin-bottom: 16px;
+    width: 96%;
+  }
+  .pitchTypeContent{
+    padding: 16px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .pitchTypeCard img{
+    height: 190px;
+    width: 190px;
+  }
+  .bx-vertical-top{
+    display: none;
+  }
+  /*FEATURE********************************************************************/
+  .featureCardContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+  }
+  .featureCard{
+    width: 46%;
+    margin-bottom: 16px;
+  }
+  .featureCard img{
+    width: 120px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+  .featureCardContent{
+    padding: 10px;
+  }
+  .featureCardContent p{
+    font-size: 14px;
+  }
+  .wearableDevicesCard img{
+    border-radius: 0 0 0 0;
+    width: 30%;
+  }
+  .wearableDevicesCard{
+    padding: 10px;
+    background-color: hsla(143, 44%, 36%, 0.4);
+    border-radius: 0 0 0 0;
+  }
+
+
+  /*LOCAL ATTRACTIONS********************************************************************/
+
+
+  .localAttractionCard{
+    width: 96%;
+  }
+
+  .localAttractionCard img{
+    width: 200px;
+    height: 180px;
+  }
+
+  .localAttractionCard img:hover{
+    transform: scale(1.5) translateX(12px) translateY(-10px);
+  }
+
+  .localAttractionCard p a{
+    font-size: 14px;
+  }
+  .safetySection p{
+    font-size: 15px;
+  }
+
+  /*ACCOUNT********************************************************************/
+
+  .card{
+    margin-top: 50px;
+    width: 600px;
+  }
+
+  .cardTop img{
+    height: 100px;
+    width: 100px;
+  }
+
+  .cardBot p{
+    font-size: 14px;
+  }
+
+  .cardBot button{
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+
+  .wishList button{
+    height: 38px;
+  }
+    
+  .bxs-trash{
+    font-size: 20px;
+  }
+
+  /*SIGNUP********************************************************************/
+
+
+  .signUpForm, .loginForm{
+    background-color: rgba(167, 255, 154, 0.1);
+    width: 80%;
+    height: 450px;
+    padding: 10px;
+    margin: 30px auto;
+  }
+  .loginForm{
+    width: 80%;
+    height: 300px;
+    margin: 60px auto;
+
+  }
+  .signUpForm input, .loginForm input, .signUpForm p, .loginForm p, .signUpForm button, .loginForm button{
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+
+    /*CONTACT********************************************************************/
+    
+  .contactForm{
+    width: 96%;
+    height: 320px;
+    padding: 20px;
+  }
+  .contactForm h1{
+    font-size: 26px;
+  }
+
+  .contactForm button{
+    padding: 8px;
+  }
+  .contactForm input, .contactForm textarea{
+    width: 80%;
+    padding: 6px 10px;
+    font-size: 15px;
+  } 
+  
+  .aboutText p, .contactForm p{
+    font-size: 15px;
+    margin: 0;
+  }
+        
+}
+
+/* Small Devices (<= 768px) */
+@media (max-width: 768px) {
+  marquee{
+    font-size: 11px;
+  }
+  .bx-vertical-top{
+    display: none;
+  }
+  .dropdown-content {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .homeSection h1{
+    margin-top: 80px;
+    font-size: 22px;
+  }
+  .homeSection nav{
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0));
+  }
+
+  .navLinks{
+    display: none;
+  }
+
+  nav {
+    height: 74px;
+  }
+
+  .navActive {
+    border-bottom: 0px solid #44ffab;
+    border-left: 3px solid #44ffab;
+    border-right: 3px solid #44ffab;
+  }
+
+  /*HOME***********************************************************************/
+
+  .homeSection h1{
+    margin-top: 10px;
+    font-size: 24px;
+  }
+
+  .homeCard p{
+    font-size: 16px;
+  }
+
+      
+  .CtoAContainer{
+    width: 90%;
+    padding: 14px ;
+    margin-top: 90px;
+  }
+
+  .CtoAContainer button,.confirmBtn,.buyBtn, .chkAvailablityBtn{
+    font-size: 14px;
+    padding: 6px 15px;
+  } 
+
+  .searchInput{
+    width: 60%;
+    padding: 6px 12px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid #000;
+  }
+  .searchForm{
+    width: 60%;
+    margin-top: 30px;
+  }
+
+  .searchBtn{
+    border: 1px solid #000;
+    padding: 6px 12px;
+    height: 30px;
+    font-size: 13px;
+
+  }
+
+  #searchContainer {
+    width: 70%;
+  }
+  
+  /*searchResults***********************************************************************/
+
+  .searchResultSection h1{
+    font-size: 20px;
+  }
+
+  .place{
+    margin: 0px 2.5%;
+    margin-top: 20px;
+    padding: 12px;
+    width: 95%;
+    justify-content: space-between;
+  }
+  .placeH{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .place img{
+    width: 200px;
+    height: 130px;
+  }
+
+  .place-name {
+    font-size: 14x;
+  }
+
+  .place-description {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .place-price {
+    font-size: 13px;
+  }
+
+  .place form {
+    padding: 12px;
+    width: 76%;
+  }
+
+  .place form label {
+    margin-bottom: 2px;
+    font-size: 11px;
+    font-weight: normal;
+  }
+
+  .conditionInput input{
+    margin: 0 4px;
+    height: 26px;
+    width: 110px;
+    padding: 6px;
+    font-size: 12px;
+  }
+  .conditionInputShorter{
+    width: 10%;
+  }
+
+  .conditionInputShorter input{
+    width: 100%;
+  }
+
+  .buyBtnDiv {
+    width: 14%;
+  }
+  
+  .buyBtnDiv input{
+    width: 100%;
+  }
+
+  .camping-site, .swimming-site{
+    display: flex;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background:linear-gradient(90deg,hsla(0, 0%, 0%, 0.1),hsla(0, 0%, 0%, 7));
+    width: 98%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+  }
+  .camping-site h2, .swimming-site h2{
+   font-size: 16px;
+  }
+  .camping-site img, .swimming-site img{
+    height: 200px;
+    max-width: 100%;
+  }
+  .camping-site p, .swimming-site p{
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .camping-site-L, .swimming-site-L{
+    min-width: 33%;
+  }
+
+
+  .camping-site-R, .swimming-site-R{
+    margin: 0 14px;
+    min-width: 63%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .buyBtn{
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .mySlides img {
+    max-height: 270px;
+  }
+  .slideshow-container {
+    max-height: 270px;
+  }
+
+  .chkH1{
+    font-size: 26px;
+    padding: 20px;
+  }
+
+  .chkForm{ 
+    padding: 50px 20px;
+    width: 94%;
+    margin: 15% 3%;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .chkForm input{
+    width: 120px;
+    height: 34px;
+    padding: 8px;
+    font-size: 14px;
+  }
+  .chkForm label{
+    font-size: 14px;
+  }
+
+  .purchase{
+    width: 65%;
+    margin: 30px auto;
+    padding: 20px 40px;
+    flex-direction: column;
+    background: linear-gradient(hsla(0, 0%, 0%, 0.5),rgba(0, 0, 0, 0));
+  }
+
+  .purH1{
+    font-size: 24px;
+  }
+  .purchase img{
+    height: 200px;
+    width: 280px;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  .purchase img{
+    align-self: center;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .purchase-details p{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0);
+    padding: 4px;
+    border-bottom: 1px solid #4b4b4b;
+  }
+  .purchaseDetailsHeader{
+    padding: 10px 50px;
+    border-radius: 5px;
+    min-width: 20%;
+    height: 170px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  .purchase form{
+    width: 100%;
+    height: 340px;
+    padding: 5px 30px;
+  }
+  .purchase form input, .purchase form textarea{
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .paymentMethod{
+    display: inline-block;
+    justify-content: space-around;
+    font-weight: normal;
+  }
+  
+  .paymentMethod input{
+    margin-right: 8px;
+  }
+  
+  .paymentMethod p, .paymentMethod div label{
+    font-weight: normal;
+  }
+
+
+  /*INFO***********************************************************************/
+  .infoSection, .pitchTypeSection, .featureSection, .localAttractionSection, .reviewSection{
+    padding: 10px;
+  }
+  .intro h1 {
+    font-size: 24px;
+  }
+  .infoSection h2, .reviewSection h2, .pitchTypeSection h2, .featureSection h2, .localAttractionSection h2{
+    font-size: 17px;
+  }
+  .infoSection p, .reviewSection p, .pitchTypeSection p, .featureSection p, .localAttractionSection p{
+    font-size: 14px;
+  }
+  .infoCard{
+    height: 220px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .infoCard img{
+    border-radius: 10px 0 0 10px;
+    min-width: 29%;
+  }
+  
+  .infoCardContent{
+    padding: 8px;
+  }
+
+  .btn-info{
+    padding: 3px 20px;
+    font-size: 11px;
+  }
+
+
+  /*REVIEW*********************************************************************/
+
+  .reviewCardContainer{
+    padding: 14px;
+    row-gap: 20px;
+    box-shadow: none;
+  }
+
+  .reviewCard{
+    width: 47%;
+  }
+
+  .reviewCard p{
+    font-size: 13px;
+  }
+
+  .reviewCardContent{
+    margin: 10px;
+  }
+    
+  .reviewCard img {
+    width: 60px;
+  }
+
+  .reviewForm textarea{
+    font-size: 14px;
+  }
+
+  .reviewForm button{
+    font-size: 10px;
+  }
+
+
+  /*PITCH TYPES********************************************************************/
+
+  .selectSiteContainer{
+    width: 55%;
+    border: 2px solid #303030;
+
+  }
+  .selectSiteContainer h3{
+    font-size: 16px;
+  }
+  
+  .selectSiteContainer button{
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .pitchTypeCard{
+    margin-bottom: 16px;
+    width: 98%;
+  }
+
+  .pitchTypeContent{
+    padding: 10px;
+    width: 80%;
+    
+  }
+
+  .pitchTypeCard img{
+    height: 200px;
+    width: 190px;
+    object-fit: cover;
+
+  }
+
+  /*FEATURE********************************************************************/
+
+  .featureCardContainer{
+    width: 100%;
+    padding: 10px;
+  }
+  
+
+  .featureCard{
+    width: 96%;
+    margin-bottom: 16px;
+  }
+
+  .featureCard img{
+    width: 140px;
+  }
+
+  .featureCardContent{
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .wearableDevicesCard img{
+    border-radius: 0 0 0 0;
+    width: 30%;
+  
+  }
+  .wearableDevicesCard{
+    padding: 10px;
+    background-color: hsla(143, 44%, 36%, 0.4);
+    border-radius: 0 0 0 0;
+  }
+
+
+  /*LOCAL ATTRACTIONS********************************************************************/
+
+  .localAttractionCard{
+    width: 98%;
+  }
+
+  .localAttractionCard img{
+    width: 190px;
+    height: 100%;
+  }
+
+  .localAttractionCard p a{
+    font-size: 13px;
+  }
+  .safetySection p{
+    font-size: 14px;
+  }
+
+  /*ACCOUNT********************************************************************/
+
+  .card {
+    margin-top: 50px;
+    width: 400px;
+  }
+  .card h2{
+    font-size: 20px;
+  }
+  .card h3{
+    font-size: 16px;
+  }
+  .card h4{
+    font-size: 12px;
+  }
+  .cardTop img{
+    height: 80px;
+    width: 80px;
+  }
+
+  .cardBot p{
+    font-size: 13px;
+  }
+
+  .cardBot button{
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /*SIGNUP********************************************************************/
+
+  .signUpForm, .loginForm{
+    background-color: rgba(167, 255, 154, 0.1);
+    width: 80%;
+    height: 500px;
+  }
+  .loginForm{
+    height: 350px;
+    margin: 60px auto;
+  }
+  .signUpForm input, .loginForm input, .signUpForm p, .loginForm p{
+    width: 82%;
+  }
+  
+
+  /*CONTACT********************************************************************/
+    
+  .contactForm{
+    width: 96%;
+    height: 320px;
+    padding: 20px;
+  }
+  .contactForm h1{
+    font-size: 26px;
+  }
+
+  .contactForm button{
+    padding: 6px;
+  }
+  .contactForm input, .contactForm textarea{
+    font-size: 13px;
+  } 
+  
+  .aboutText p, .contactForm p{
+    font-size: 13px;
+  }
+
+  
+
+  /*FOOTER********************************************************************/
+
+  footer, .footerB{
+    padding: 10px;
+  }
+
+  footer h3{
+    font-size: 15px;
+  }
+
+  footer a, footer p{
+    font-size: 13px;
+  }
+
+  .footerB div a{
+    font-size: 16px;
+  }
+
+
+
+
+
+  .icons{
+    display: inline-flex;
+    z-index: 3;
+      color: #44ffab;
+  }
+  #check:checked~.icons #menu-icon{
+      display: none;
+  }
+  .icons #close-icon{
+      display: none;
+  }
+  #check:checked~.icons #close-icon{
+      display: block;
+  }
+  .navbar{
+    position: absolute;
+    top: 0%;
+    right: 0;
+    width: 100%;
+    height: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); 
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    transition: 0.3s ease;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding-top: 70px;
+  }
+  #check:checked~.navbar{
+    height: 100vh;
+  }
+  .navbar a{
+  
+    box-shadow: -100px 30px 30px hsla(0, 0%, 0%, 0.6);
+    width: 250px;
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: 0.3s ease;
+    background-color: hsla(0, 0%, 0%, 1);
+    padding: 14px 50px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  #check:checked~.navbar a{
+      transform: translateY(0);
+      opacity: 1;
+      transition-delay: calc(.2s * var(--i));
+  }
+          
+}
+
+
+
+/* Extra Small Devices (<= 600px) */
+@media (max-width: 600px) {
+  .icons{
+    font-size: 30px;
+  }
+  .infoSection p, .reviewSection p, .pitchTypeSection p, .featureSection p, .localAttractionSection p{
+    font-size: 12px;
+  }
+  .pitchTypeCard img{
+    width: 140px;
+  }
+  .pitchTypeCard p{
+    font-size: 12px;
+  }
+  .localAttractionCard{
+    height: 200px;
+  }
+  .localAttractionCard img{
+    height: 200px;
+  }
+  
+  /*REVIEW*********************************************************************/
+
+  .reviewCardContainer{
+    flex-wrap: wrap;
+  }
+
+  .reviewCard{
+    width: 90%;
+  }
+ 
+  .reviewCard img {
+    width: 70px;
+  }
+
+  .navbar a{
+    width: 220px;
+    font-size: 14px;
+    margin: 12px 0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .logoDiv img{
+    width: 36px;
+    height: 36px;
+  }
+
+  nav{
+    height: 50px;
+  }
+
+  .navbar{
+    padding-top: 50px;
+  }
+  .selectSiteContainer{
+    width: 70%;
+    padding: 8px;
+  }
+  .selectSiteContainer h3{
+    font-size: 15px;
+  }
+  
+  .selectSiteContainer button{
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+  .homeSection h1{
+    margin-top: 0px;
+    font-size: 19px;
+    margin-bottom: 30px;
+  }
+
+  .CtoAContainer{
+    width: 98%;
+    padding: 18px 8px ;
+    margin-top: 150px;
+  }
+
+  .CtoAContainer button,.confirmBtn,.buyBtn, .chkAvailablityBtn{
+    font-size: 13px;
+    padding: 6px 15px;
+  } 
+
+  .searchInput{
+    width: 60%;
+    padding: 4px 10px;
+    height: 24px;
+    font-size: 14px;
+    border: 1px solid #000;
+  }
+  .searchForm{
+    width: 60%;
+    margin-top: 10px;
+  }
+
+  .searchBtn{
+    border: 1px solid #000;
+    padding: 4px 10px;
+    height: 24px;
+    font-size: 11px;
+
+  }
+  .place-description {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .place img{
+    width: 180px;
+    height: 140px;
+  }
+  
+  .place form label {
+    margin-bottom: 2px;
+    font-size: 9px;
+    font-weight: normal;
+  }
+
+
+  .conditionInput input{
+    margin: 0 2px;
+    height: 20px;
+    width: 90px;
+    padding: 6px;
+    font-size: 10px;
+  }
+  .conditionInputShorter{
+    width: 14%;
+  }
+
+  .conditionInputShorter input{
+    width: 100%;
+  }
+
+  .buyBtnDiv {
+    width: 60%;
+  }
+  
+  .buyBtnDiv input{
+    width: 100%;
+    padding: 2px;
+
+  }
+
+  .place form, .place{
+    padding: 8px;
+  }
+
+  .purchase{
+    padding: 10px 20px;
+    background: linear-gradient(hsla(0, 0%, 0%, 0.5),rgba(0, 0, 0, 0));
+  }
+  .purchase img{
+    height: 150px;
+    width: 230px;
+    object-fit: cover;
+  }
+
+  .purchase-details p{
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0);
+    padding: 6px;
+  }
+  .purchaseDetailsHeader{
+    padding: 10px 30px;
+    border-radius: 5px;
+    height: 240px;
+  }
+
+  .purchase form{
+    height: 100%;
+  }
+  .purchase form input, .purchase form textarea{
+    font-size: 11px;
+    padding: 6px;
+  }
+  .purchase img{
+    width: 100%;
+  }
+}
+
+
+/* Extra Small Devices (<= 425px) */
+@media (max-width: 425px) {
+  
+
+  .navbar a{
+    width: 200px;
+    font-size: 12px;
+  }
+  .homeSection h1{
+    margin-top: 0px;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .CtoAContainer{
+    width: 98%;
+    padding: 38px 4px ;
+    margin-top: 200px;
+  }
+
+  .CtoAContainer button,.confirmBtn,.buyBtn, .chkAvailablityBtn{
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .searchInput{
+    width: 60%;
+    padding: 4px 10px;
+    height: 24px;
+    font-size: 11px;
+    border: 1px solid #000;
+  }
+  .searchForm{
+    width: 60%;
+    margin-top: 10px;
+  }
+
+  .searchBtn{
+    border: 1px solid #000;
+    padding: 4px 10px;
+    height: 24px;
+    font-size: 10px;
+
+  }
+
+  .homeCard p{
+    font-size: 14px;
+  }
+
+  #searchContainer {
+    width: 80%;
+  }
+  
+  .chkH1{
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .intro{
+    margin: 2px;
+  }
+
+  .intro h1 {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+  }
+  .intro p {
+    padding: 5px 2px;
+    margin: 0;
+  }
+
+  .infoSection h2, .reviewSection h2, .pitchTypeSection h2, .featureSection h2, .localAttractionSection h2{
+    font-size: 14px;
+  }
+  .infoSection p, .reviewSection p, .pitchTypeSection p, .featureSection p, .localAttractionSection p{
+    font-size: 11px;
+  }
+  .infoCard{
+    height: 250px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .infoCard img{
+    border-radius: 10px 0 0 10px;
+    min-width: 40%;
+  }
+  
+  .infoCardContent{
+    padding: 8px;
+  }
+
+  .btn-info{
+    padding: 3px 20px;
+    font-size: 11px;
+  }
+  .selectSiteContainer{
+    width: 85%;
+    padding: 8px;
+  }
+  .selectSiteContainer h3{
+    font-size: 14px;
+  }
+  
+  .selectSiteContainer button{
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+
+  .place form {
+    padding: 6px;
+    background: linear-gradient(45deg,rgba(0, 0, 0, 0.3),rgba(87, 126, 113, 0.31),rgba(0, 0, 0, 0.4));
+  }
+
+  .place-description {
+    font-size: 10px;
+    margin-bottom: 18px;
+  }
+
+  .place-name {
+    font-size: 13px;
+  }
+  .place-price {
+    font-size: 11px;
+  }
+
+  .place img{
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+    border-radius: 10px;
+  }
+  
+  .place form label {
+    font-size: 8px;
+  }
+
+
+  .conditionInput input{
+    height: 18px;
+    width: 80px;
+    padding: 4px;
+    font-size:9px;
+  }
+  .conditionInputShorter{
+    width: 16%;
+  }
+
+  .conditionInputShorter input{
+    width: 100%;
+  }
+
+  .buyBtnDiv {
+    width: 40%;
+    margin: 0 30px;
+  }
+  
+  .buyBtnDiv input{
+    width: 100%;
+    padding: 2px;
+
+  }
+
+  .place form, .place{
+    padding: 8px;
+  }
+
+
+  
+  .camping-site, .swimming-site{
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background:linear-gradient(180deg,hsla(0, 0%, 0%, 0.1),hsla(0, 0%, 0%, 7));
+    width: 98%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .camping-site h2, .swimming-site h2{
+   font-size: 16px;
+  }
+  .camping-site img, .swimming-site img{
+    height: 140px;
+    max-width: 70%;
+    margin: 0 15%;
+    margin-bottom: 5px;
+  }
+  .camping-site p, .swimming-site p{
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .camping-site-L, .swimming-site-L{
+    min-width: 90%;
+  }
+
+  .camping-site-R, .swimming-site-R{
+    margin-top: 10px;
+    align-self: center;
+    min-width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .buyBtn{
+    padding: 4px 16px;
+    border-radius: 4px;
+    font-size: 11px;
+  }
+
+  .purchase{
+    width: 80%;
+  }
+  .purH1{
+    font-size: 18px;
+  }
+  .purchase img{
+    height: 150px;
+    width: 230px;
+    object-fit: cover;
+  }
+
+  .purchase-details p{
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0);
+    padding: 6px;
+  }
+  .purchaseDetailsHeader{
+    padding: 10px 30px;
+    border-radius: 5px;
+    height: 240px;
+  }
+
+  .purchase form{
+    height: 100%;
+  }
+  .purchase form input, .purchase form textarea{
+    font-size: 11px;
+    padding: 6px;
+  }
+  .purchase img{
+    width: 100%;
+  }
+
+  .paymentMethod{
+    background: linear-gradient(135deg,hsla(0, 0%, 100%, 0.8),rgba(60, 60, 60, 0.5));
+    padding: 0 30px;
+  }
+
+  /*REVIEW*********************************************************************/
+  .reviewCard{
+    width: 100%;
+
+  }
+
+  .reviewCard p{
+    font-size: 12px;
+  }
+
+  .reviewCardContent{
+    margin: 10px;
+  }
+    
+  .reviewCard img {
+    width: 50px;
+    height: 55px;
+  }
+
+  .reviewForm textarea{
+    font-size: 12px;
+  }
+
+  .reviewForm button{
+    font-size: 10px;
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+
+  /*PITCH TYPES********************************************************************/
+
+  .pitchTypeCard{
+    margin: 8px 0px;
+    width: 98%;
+    height: 240px;
+  }
+
+  .pitchTypeContent{
+    padding: 10px;
+    width: 80%;
+  }
+  .pitchTypeContent p{
+    font-size: 11px;
+  }
+  .pitchTypeContent button{
+    font-size: 8px;
+    padding: 2px 8px;
+  }
+
+  .pitchTypeCard img{
+    height: 240px;
+    width: 120px;
+  }
+
+  /*FEATURE********************************************************************/
+
+  .featureCard{
+    width: 98%;
+  }
+
+  .featureCard img{
+    width: 120px;
+  }
+
+  .wearableDevicesCard img{
+    border-radius: 0 0 0 0;
+    width: 30%;
+  
+  }
+  .wearableDevicesCard{
+    padding: 10px;
+    background-color: hsla(143, 44%, 36%, 0.4);
+    border-radius: 0 0 0 0;
+  }
+
+
+
+  /*LOCAL ATTRACTIONS********************************************************************/
+  .localAttractionCard{
+    width: 98%;
+    height: 230px;
+  }
+
+  .localAttractionCard img{
+    width: 120px;
+    height: 100%;
+  }
+
+  .localAttractionCard p a{
+    font-size: 10px;
+  }
+
+  .safetySection p{
+    font-size: 13px;
+  }
+  
+  /*ACCOUNT********************************************************************/
+
+  .card {
+    width: 96%;
+    margin:auto;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  .card h2{
+    font-size: 15px;
+  }
+  .card h3{
+    font-size: 14px;
+  }
+  .card h4{
+    font-size: 11px;
+  }
+  .cardTop img{
+    height: 50px;
+    width: 50px;
+  }
+
+  .cardBot p{
+    font-size: 12px;
+  }
+
+  .cardBot button{
+    padding: 2px 4px;
+    font-size: 11px;
+  }
+
+  .wishList button{
+    background: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 2px 4px;
+    height: 30px;
+  }
+  
+  .bxs-trash{
+    font-size: 16px;
+  }
+  
+  /*SIGNUP********************************************************************/
+  .signUpSection h1{
+    font-size: 24px;
+  }
+
+  .signUpForm, .loginForm{
+    background-color: rgba(167, 255, 154, 0.1);
+    width: 80%;
+    height: 500px;
+  }
+  .loginForm{
+    height: 350px;
+    margin: 60px auto;
+  }
+  .signUpForm input, .loginForm input, .signUpForm p, .loginForm p{
+    width: 86%;
+  }
+
+  .signUpForm button, .loginForm button{
+    width: 30%;
+  }
+  
+    /*CONTACT********************************************************************/
+  .aboutText p{
+    color:white;
+    text-shadow: 0 0 1px #000,0 0 2px #000, 0 0 3px #000,0 0 4px #000,0 0 5px #000;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    padding: 6px;
+  }    
+  .contactForm{
+    width: 96%;
+    height: 320px;
+    padding: 20px;
+  }
+  .contactForm h1{
+    font-size: 22px;
+  }
+
+  .contactForm button{
+    padding: 6px;
+    width: 40%;
+    font-size: 12px;
+  }
+  .contactForm input, .contactForm textarea{
+    font-size: 12px;
+  } 
+  
+  .aboutText p, .contactForm p{
+    font-size: 11px;
+    text-align: justify;
+  }
+  
+  footer, .footerB{
+    padding: 8px;
+  }
+
+  footer h3{
+    font-size: 14px;
+  }
+
+  footer a, footer p{
+    font-size: 11px;
+  }
+
+  .footerB div a{
+    font-size: 12px;
+    margin: 6px;
+  }
+    
+}
+
+
+.rss-container{
+  height: 50vh;
+  background-color: #000000ba;
+}
+
+.rss-container button{
+  font-size: 16px;
+  padding: 10px;
+}
+
+.g-recaptcha{
+  margin-bottom: 20px;
+}
